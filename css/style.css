@@ -1,0 +1,35 @@
+:root {
+    --claro: #ebf4fb;
+    --oscuro: #172630;
+  }
+
+body{
+    background-color: var(--claro);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    margin: 0 auto;
+    width: 30%;
+}
+
+.contenedor-cuerpo{
+    display: flex;
+    flex-direction: row;
+}
+
+.barra-navegacion, .cuerpo{
+    border: 0.1rem solid black;
+}
+
+.barra-navegacion{
+    width: 25vw;
+}
+
+.cuerpo{
+    width: 75vw;
+}
