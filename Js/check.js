@@ -1,5 +1,5 @@
-var MainUser = "Leandro_Sosa"
-var MainPswr = "Tucumano"
+var MainUser = "lea"
+var MainPswr = "tuc"
 
 document.getElementById('sesionBTN').addEventListener('click', acceder);
 
