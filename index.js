@@ -9,11 +9,11 @@ function acceder() {
 
     if(user==MainUser&pswr==MainPswr)
         {
-            console.log("Sesión Iniciada con exito");
+            console.log("Sesión Iniciada con exito.");
         }
         else
         {
-            console.log("Credenciales Incorrectas");
+            console.log("Credenciales Incorrectas.");
         }
    
 }
