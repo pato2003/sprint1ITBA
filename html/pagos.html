@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITPowerBank</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>ITPowerBank - Pagos</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="encabezado">
-        <img src="img/Designer (2).jpeg" alt="">
+        <div class="logo">
+            <img src="../img/Designer (2).jpeg" alt="Logo de la Empresa">
+        </div>
+
+        <div class="login">
+            <h3>Iniciar Sesión </h3>
+            <form>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+                <button type="submit" id="sesionBTN">Iniciar Sesión</button>
+            </form>
+        </div>
     </header>
-    <section class="contenedor-cuerpo">
-        <aside>
-            <nav class="barra-navegacion">
+    
+    <section class="contenedor">
+        <aside class="cont-nav">
+            <nav>
                 <ul>
-                    <li><a href="html/index.html">Inicio</a></li>
-                    <li><a href="html/cuentas.html">Cuentas</a></li>
-                    <li><a href="html/transferencias.html">Transferencias</a></li>
-                    <li><a href="#">Pagos</a></li>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./cuentas.html">
+                            Cuentas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./transferencias.html">
+                            Transferencias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pagos.html">
+                            Pagos
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -26,7 +52,10 @@
             <h1>PAGOS</h1>
             <p>Rellenar.</p>
         </main>
+
     </section>
+
+
     <footer></footer>
 
 
