@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITPowerBank</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="encabezado">
-        <img src="img/Designer (2).jpeg" alt="">
+        <div class="logo">
+            <img src="img/Designer (2).jpeg" alt="Logo de la Empresa">
+        </div>
+
+        <div class="login">
+            <h3>Iniciar Sesión </h3>
+            <form action="/login" method="POST">
+                <input type="text" name="usuario" placeholder="Usuario" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
     </header>
-    <section class="contenedor-cuerpo">
-        <aside>
-            <nav class="barra-navegacion">
+    
+    <section class="contenedor">
+        <aside class="cont-nav">
+            <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="html/cuentas.html">Cuentas</a></li>
-                    <li><a href="html/transferencias.html">Transferencias</a></li>
-                    <li><a href="html/pagos.html">Pagos</a></li>
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="html/cuentas.html">
+                            Cuentas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="html/transferencias.html">
+                            Transferencias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="html/pagos.html">
+                            Pagos
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </aside>
-        <main class="cuerpo">
-            <article>
-                <h1>Iniciar Sesión </h1>
-                <ul>
-                    <li><input type="text" id="usuario" placeholder="Usuario"></li>
-                    <li><input type="password" id="contraseña" placeholder="Contraseña"></li>
-                    <li><button id="sesionBTN">Entrar</button></li>
-                </ul>
-            </article>
+
+        <main class="contenido-principal">
+            <h1>Bienvenido</h1>
+            <p>Rellenar.</p>
         </main>
+
     </section>
+
+
     <footer></footer>
+
+
     <script src="index.js"></script>
 </body>
+
 </html>

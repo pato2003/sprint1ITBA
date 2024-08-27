@@ -1,35 +1,118 @@
 :root {
     --claro: #ebf4fb;
     --oscuro: #172630;
-  }
+    --difuminado: #17263028;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body{
     background-color: var(--claro);
-}
-
-header{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-header img{
-    margin: 0 auto;
-    width: 30%;
-}
-
-.contenedor-cuerpo{
+.encabezado {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--oscuro);
+    border: black 1px solid;
 }
 
-.barra-navegacion, .cuerpo{
-    border: 0.1rem solid black;
+.logo img {
+    height: 50px;
 }
 
-.barra-navegacion{
-    width: 25vw;
+.login form {
+    display: flex;
+    align-items: center;
 }
 
-.cuerpo{
-    width: 75vw;
+.login input {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid var(--difuminado);
+    border-radius: 3px;
+}
+
+.login button {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--oscuro);
+    color: var(--claro);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contenedor{
+    display: flex;
+    flex: 1;
+}
+
+.cont-nav{
+    width: 200px;
+    padding: 15px;
+    border: black 1px solid;
+    border-right: 3px solid var(--difuminado);
+}
+
+.cont-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cont-nav ul li {
+    margin-bottom: 10px;
+}
+
+.cont-nav ul li a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.cont-nav ul li a:hover {
+    background-color: var(--difuminado);
+}
+
+.contenido-principal {
+    padding: 20px;
+    flex: 1;
+}
+
+/* MEDIAS QUERYS */
+
+        /* Tablets */
+@media (max-width: 768px) {
+    .encabezado{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .cont-nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid var(--difuminado);
+    }
+
+    .cont-nav nav ul li {
+        margin-bottom: 5px;
+    }
+
+    .concontenido-principaltent {
+        padding: 10px;
+    }
 }
