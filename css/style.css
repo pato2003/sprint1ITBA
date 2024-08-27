@@ -84,7 +84,7 @@ body{
     background-color: var(--difuminado);
 }
 
-.contenido-principal {
+.area-principal {
     padding: 20px;
     flex: 1;
 }
@@ -112,7 +112,7 @@ body{
         margin-bottom: 5px;
     }
 
-    .concontenido-principaltent {
+    .area-principal {
         padding: 10px;
     }
 }
