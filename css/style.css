@@ -149,6 +149,7 @@ form input, section select{
     width: 20vw;
 }
 
+
 .buttons{
     display: flex;
     flex-direction: row;
@@ -157,5 +158,10 @@ form input, section select{
 
 form input[type="submit"], form input[type="reset"]{
     width: 49%;
-    padding: 0.2rem 0;
+    border: none;
+    background-color: var(--oscuro);
+    color: var(--claro);
+    border-radius: 0.2rem;
+    padding: 0.4rem 0;
+    cursor: pointer;
 }
