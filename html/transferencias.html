@@ -59,14 +59,68 @@
         </aside>
 
         <main class="area-principal">
-            <h1>TRANSFERENCIA</h1>
-            <p>Rellenar.</p>
+            <h1>Transferencias</h1>
+            <section>
+                <label for="accion">Seleccione lo que desea hacer: </label>
+                <select name="accion" id="accion">
+                    <option value="transferencia">Transferencia</option>
+                    <option value="pago">Pago</option>
+                    <option value="prestamo">Prestamo</option>
+                </select>
+            </section>
+            <form method="post">
+                <article class="input-transferencia">
+                    <section>
+                        <label for="cbu">Ingrese CBU</label>
+                        <input type="number" name="cbu" id="cbu">
+                    </section>
+                    <section>
+                        <label for="monto-transferencia">Ingrese el monto: $</label>
+                        <input type="number" name="monto-transferencia" id="monto-transferencia">
+                    </section>
+                </article>
+
+                <article class="input-pago">
+                    <section>
+                        <label for="codigo-pago">Ingrese el codigo de pago</label>
+                        <input type="number" name="codigo-pago" id="codigo-pago">
+                    </section>
+                </article>
+
+                <article class="input-prestamo">
+                    <section>
+                        <label for="monto-prestamo">Ingrese el monto que quiere pedir: $</label>
+                        <input type="number" name="monto-prestamo" id="monto-prestamo">
+                    </section>
+                    <section>
+                        <label for="plazo">Ingrese el plazo(en meses): </label>
+                        <input type="number" name="plazo" id="plazo">
+                    </section>
+                </article>
+                <article class="buttons">
+                    <input type="submit" value="Enviar" id="enviarFormu">
+                    <input type="reset" value="Limpiar">
+                </article>
+            </form>
+            <section>
+                <p id="mensaje"></p>
+            </section>
         </main>
 
     </section>
 
 
-    <footer></footer>
+    <footer>
+        <p>© 2024 ITPowerBank. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </footer>
 
 
     <script src="../Js/check.js"></script>

@@ -90,6 +90,229 @@ body{
     flex: 1;
 }
 
+footer {
+    color: var(--oscuro);
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: var(--difuminado) 3px solid;
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: var(--oscuro);
+    text-decoration: none;
+}
+
+
+/* INICIO */
+
+.loan-calculator, .currency-converter {
+    margin-top: 20px;
+}
+
+.loan-calculator form, .currency-converter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.loan-calculator label, .currency-converter label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.loan-calculator input, .currency-converter input, .currency-converter select {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 200px;
+}
+
+.loan-calculator button, .currency-converter button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.loan-calculator button:hover, .currency-converter button:hover {
+    background-color: #0056b3;
+}
+
+.loan-calculator #loanResult, .currency-converter #currencyResult {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* CUENTAS */
+/* Estilos de la tabla de cuentas */
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.accounts-table th, .accounts-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.accounts-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.accounts-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.accounts-table tr:hover {
+    background-color: #ddd;
+}
+
+.accounts-table button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.accounts-table button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el resumen de cuentas */
+.account-summary {
+    margin-top: 20px;
+}
+
+.account-summary h3 {
+    margin-bottom: 10px;
+}
+
+.account-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-summary ul li {
+    background: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para gráficos */
+.account-charts {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.account-charts img {
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* TRANSFERENCIAS */
+
+.input-pago, .input-prestamo{
+    display: none;
+}
+
+h1{
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 2rem;
+}
+
+main>section, main>form{
+    width: 50vw;
+    margin: 0 auto;
+
+}
+
+form section, main>section{
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form input, section select{
+    width: 20vw;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form input[type="submit"], form input[type="reset"]{
+    width: 49%;
+    border: none;
+    background-color: var(--oscuro);
+    color: var(--claro);
+    border-radius: 0.2rem;
+    padding: 0.4rem 0;
+    cursor: pointer;
+}
+
+
+
+
 /* MEDIAS QUERYS */
 
         /* Tablets */
@@ -124,8 +347,10 @@ body{
     .area-principal {
         padding: 10px;
     }
-}
 
+    
+}
+        /* CELULARES */
 @media (max-width: 523px) {
     .login input, .login button {
         width: 100%;
