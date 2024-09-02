@@ -20,15 +20,22 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding-inline: 20px;
     color: var(--oscuro);
     border-bottom: 3px solid var(--difuminado);
 
 }
 
+.logo{
+flex-grow: 1;}
+
 .logo img {
-    height: 50px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    object-fit: contain;
 }
+
 
 .login form {
     display: flex;
@@ -86,14 +93,13 @@ body{
 }
 
 .area-principal {
-    padding: 20px;
     flex: 1;
 }
 
 footer {
     color: var(--oscuro);
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -117,7 +123,7 @@ footer nav ul li a {
 
 /* INICIO */
 
-.loan-calculator, .currency-converter {
+/* .loan-calculator, .currency-converter {
     margin-top: 20px;
 }
 
@@ -153,11 +159,11 @@ footer nav ul li a {
 .loan-calculator #loanResult, .currency-converter #currencyResult {
     margin-top: 10px;
     font-size: 14px;
-}
+} */
 
 /* CUENTAS */
 /* Estilos de la tabla de cuentas */
-.accounts-table {
+/* .accounts-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -192,10 +198,10 @@ footer nav ul li a {
 
 .accounts-table button:hover {
     background-color: #0056b3;
-}
+} */
 
 /* Estilos para el resumen de cuentas */
-.account-summary {
+/* .account-summary {
     margin-top: 20px;
 }
 
@@ -212,10 +218,10 @@ footer nav ul li a {
     background: #f4f4f4;
     padding: 10px;
     border-bottom: 1px solid #ddd;
-}
+} */
 
 /* Estilos para gráficos */
-.account-charts {
+/* .account-charts {
     margin-top: 20px;
     text-align: center;
 }
@@ -260,7 +266,7 @@ footer nav ul li a {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 
 
@@ -273,13 +279,11 @@ footer nav ul li a {
 h1{
     text-align: center;
     margin: 1rem auto;
-    font-size: 2rem;
 }
 
 main>section, main>form{
     width: 50vw;
     margin: 0 auto;
-
 }
 
 form section, main>section{
@@ -293,15 +297,15 @@ form input, section select{
     width: 20vw;
 }
 
-
 .buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* width: 50vw; */
 }
 
 form input[type="submit"], form input[type="reset"]{
-    width: 49%;
+    /* width: 49%; */
     border: none;
     background-color: var(--oscuro);
     color: var(--claro);
@@ -311,8 +315,6 @@ form input[type="submit"], form input[type="reset"]{
 }
 
 
-
-
 /* MEDIAS QUERYS */
 
         /* Tablets */
@@ -320,6 +322,7 @@ form input[type="submit"], form input[type="reset"]{
     .encabezado{
         flex-direction: column;
         align-items: center;
+        padding-bottom: 10px;
     }
 
     .contenedor {
@@ -348,10 +351,22 @@ form input[type="submit"], form input[type="reset"]{
         padding: 10px;
     }
 
-    
+    /* QUERYS TABLETS TRANSFERENCIAS */
+
+    main>section, main>form{
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    form input, section select{
+        width: 30vw;
+    }
 }
+
+
         /* CELULARES */
 @media (max-width: 523px) {
+
     .login input, .login button {
         width: 100%;
         margin: 5px 0;
@@ -372,4 +387,21 @@ form input[type="submit"], form input[type="reset"]{
         margin: 5px;
         max-width: 100px;
     }
+
+    /* QUERYS CELULARES TRANSFERENCIAS */
+
+    form section, main>section{
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    form input, section select{
+        width: 80vw;
+    }
+    
+    .buttons{
+        gap: 1rem;    
+    }    
 }
