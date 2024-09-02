@@ -40,18 +40,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./pagos.html">
-                            Pagos
-                        </a>
-                    </li>
-                    <li>
                         <a href="./prestamos.html">
                             Préstamos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./conversor.html">
-                            Convertidor de moneda
                         </a>
                     </li>
                 </ul>
@@ -61,11 +51,10 @@
         <main class="area-principal">
             <h1>Transferencias</h1>
             <section>
-                <label for="accion">Seleccione lo que desea hacer: </label>
+                <label for="accion">Seleccione el tipo de operación: </label>
                 <select name="accion" id="accion">
                     <option value="transferencia">Transferencia</option>
                     <option value="pago">Pago</option>
-                    <option value="prestamo">Prestamo</option>
                 </select>
             </section>
             <form method="post">
@@ -86,17 +75,7 @@
                         <input type="number" name="codigo-pago" id="codigo-pago">
                     </section>
                 </article>
-
-                <article class="input-prestamo">
-                    <section>
-                        <label for="monto-prestamo">Ingrese el monto que quiere pedir: $</label>
-                        <input type="number" name="monto-prestamo" id="monto-prestamo">
-                    </section>
-                    <section>
-                        <label for="plazo">Ingrese el plazo(en meses): </label>
-                        <input type="number" name="plazo" id="plazo">
-                    </section>
-                </article>
+                          
                 <article class="buttons">
                     <input type="submit" value="Enviar" id="enviarFormu">
                     <input type="reset" value="Limpiar">
