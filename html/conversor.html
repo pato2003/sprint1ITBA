@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITPowerBank - Pagos</title>
+    <title>ITPowerBank - Conversor</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -59,26 +59,29 @@
         </aside>
 
         <main class="area-principal">
-            <h1>PAGOS</h1>
-            <p>Rellenar.</p>
+            <nav>
+                <h1>CONVERTIDOR DE MONEDA</h1>
+                <h3>Ingrese el monto en pesos que desea convertir a dólares (valor oficial).</h3>
+                <p>Venta: $973</p>
+                <br>
+                <form id="form_conv">
+                    <label for="monto">Monto en pesos:</label> <br>
+                    <input type="number" id="monto" name="monto" placeholder="Monto en pesos" required>
+                    <button type="submit">Convertir</button>
+                    <br><br>
+                    <label for="resultado">Monto calculado en dólares:</label>
+                    <br>
+                    <input type="number" id="resultado" name="resultado" placeholder="Monto en USD" disabled>
+                </form>
+            </nav>
         </main>
 
     </section>
 
 
-    <footer>
-        <p>© 2024 ITPowerBank. Todos los derechos reservados.</p>
-        <nav>
-            <ul>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-
-    </footer>
+    <footer></footer>
 
 
-    <script src="../Js/check.js"></script>
+    <script src="../Js/conversor.js" defer></script>
 </body>
 </html>
