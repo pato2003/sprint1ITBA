@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +13,7 @@
             <img src="../img/Designer (2).jpeg" alt="Logo de la Empresa">
         </div>
 
-        <div class="login">
-            <h3>Iniciar Sesión </h3>
-            <form>
-                <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
-                <button type="submit" id="sesionBTN">Iniciar Sesión</button>
-            </form>
-        </div>
+        <div id="cont__boton_logout"></div>
     </header>
 
     <section class="contenedor">
@@ -53,58 +45,8 @@
         <main class="area-principal main-content">
             <h2>Mis Cuentas</h2>
             <p>Aquí puedes ver y gestionar todas tus cuentas bancarias.</p>
-
-            <!-- Tabla de cuentas -->
-            <!-- <table class="accounts-table">
-                <thead>
-                    <tr>
-                        <th>Tipo de Cuenta</th>
-                        <th>Número de Cuenta</th>
-                        <th>Saldo</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cuenta Corriente</td>
-                        <td>123-456789-00</td>
-                        <td>$50,000</td>
-                        <td><button class="details-btn" data-account="123-456789-00">Ver Detalles</button></td>
-                    </tr>
-                    <tr>
-                        <td>Caja de Ahorro</td>
-                        <td>987-654321-00</td>
-                        <td>$15,300</td>
-                        <td><button class="details-btn" data-account="987-654321-00">Ver Detalles</button></td>
-                    </tr>
-                </tbody>
-            </table> -->
-
-            <!-- Movimientos recientes -->
-            <!-- <div class="account-summary">
-                <h3>Movimientos Recientes</h3>
-                <ul>
-                    <li>Depósito: $2,000 (01/09/2024)</li>
-                    <li>Transferencia: -$500 (02/09/2024)</li>
-                    <li>Pago de Servicios: -$1,200 (03/09/2024)</li>
-                </ul>
-            </div> -->
-
-            <!-- Gráfico ilustrativo -->
-            <!-- <div class="account-charts">
-                <h3>Resumen en Gráficos</h3>
-                <img src="grafico-ejemplo.png" alt="Gráfico de ejemplo de saldos">
-            </div>
-
-            <div id="accountModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Detalles de la Cuenta</h3>
-                    <p id="modalAccountNumber"></p>
-                    <p>Información adicional sobre la cuenta seleccionada.</p>
-                </div>
-            </div> -->
-
+            <br>
+            <div id="cont_log_cuentas"></div>
         </main>
 
     </section>
@@ -122,8 +64,7 @@
 
     </footer>
 
-
-    <script src="../Js/check.js"></script>
+    <script src="../Js/cuentas.js"></script>
 </body>
 
 </html>
