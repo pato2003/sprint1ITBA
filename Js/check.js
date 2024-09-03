@@ -1,8 +1,8 @@
 let users = {
-    "lean": "tuc",
-    "vanpa": "123",
-    "pato": "456"
+    "ITPOWERBANK": "2024"
 };
+
+localStorage.setItem("validado", "false");
 
 document.getElementById('sesionBTN').addEventListener('click', acceder);
 
@@ -17,6 +17,8 @@ function acceder(event) {
         // Si el usuario y la contraseña coinciden
         let h1Bienvenida = document.getElementById("bienvenida");
         loginDiv.style.display = 'none';
+
+        /*
         // Usamos un switch para determinar el mensaje de bienvenida
         switch (user) {
             case 'lean':
@@ -33,10 +35,17 @@ function acceder(event) {
                 h1Bienvenida.textContent = "Usuario desconocido";
                 break;
         }
+        */
+
+        h1Bienvenida.textContent = `Bienvenido ${user}`;
+
+        localStorage.setItem("validado", "true");
 
         console.log("Sesión Iniciada con éxito.");
     } else {
         // Si las credenciales son incorrectas
+        
+        localStorage.setItem("validado", "false");
         alert("Credenciales Incorrectas.");
     }
 }
@@ -119,85 +128,3 @@ function acceder(event) {
 //     });
 // });
 
-// //CUENTAS
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const modal = document.getElementById("accountModal");
-//     const closeModal = document.querySelector(".close");
-//     const modalAccountNumber = document.getElementById("modalAccountNumber");
-
-//     // Función para abrir el modal con la información de la cuenta
-//     function openModal(accountNumber) {
-//         modalAccountNumber.textContent = "Número de Cuenta: " + accountNumber;
-//         modal.style.display = "block";
-//     }
-
-//     // Agregar evento de clic a los botones de detalles
-//     document.querySelectorAll(".details-btn").forEach(button => {
-//         button.addEventListener("click", function() {
-//             const accountNumber = this.getAttribute("data-account");
-//             openModal(accountNumber);
-//         });
-//     });
-
-//     // Cerrar el modal al hacer clic en la "X"
-//     closeModal.addEventListener("click", function() {
-//         modal.style.display = "none";
-//     });
-
-//     // Cerrar el modal al hacer clic fuera del contenido del modal
-//     window.addEventListener("click", function(event) {
-//         if (event.target === modal) {
-//             modal.style.display = "none";
-//         }
-//     });
-// });
-
-//TRANSFERENCIAS 
-
-const contenidoPago = document.querySelector(".input-pago")
-const contenidoTransferencia = document.querySelector(".input-transferencia")
-const btnSubmit = document.querySelector("#enviarFormu")
-
-let selectAccion = document.getElementById("accion")
-let mensaje
-
-selectAccion.onchange = () => {
-    switch (selectAccion.value) {
-        case "transferencia":
-            contenidoTransferencia.style.display = "block"
-            contenidoPago.style.display = "none"
-            break;
-        case "pago":
-            contenidoTransferencia.style.display = "none"
-            contenidoPago.style.display = "block"
-            break;
-    
-        default:
-            break;
-    }
-}
-
-
-btnSubmit.onclick = (e) => {
-    clearInputs()
-    e.preventDefault()
-    switch (selectAccion.value) {
-        case "transferencia":
-            mensaje = "Transferencia realizada. Le enviareos por correo el comprobante"
-            break;
-        case "pago":
-            mensaje = "Pago de servicio realizado. Gracias por elegirnos!"
-            break;
-        default:
-            break;
-    }
-    window.alert(mensaje)
-}
-
-
-function clearInputs() {
-    document.getElementById("cbu").value =""
-    document.getElementById("monto-transferencia").value =""
-    document.getElementById("codigo-pago").value =""
-}

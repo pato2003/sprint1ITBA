@@ -12,14 +12,7 @@
             <img src="../img/Designer (2).jpeg" alt="Logo de la Empresa">
         </div>
 
-        <div class="login">
-            <h3>Iniciar Sesión </h3>
-            <form>
-                <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
-                <button type="submit" id="sesionBTN">Iniciar Sesión</button>
-            </form>
-        </div>
+        <div id="cont__boton_logout"></div>
     </header>
     
     <section class="contenedor">
@@ -50,40 +43,7 @@
 
         <main class="area-principal">
             <h1>Transferencias</h1>
-            <section>
-                <label for="accion">Seleccione el tipo de operación: </label>
-                <select name="accion" id="accion">
-                    <option value="transferencia">Transferencia</option>
-                    <option value="pago">Pago</option>
-                </select>
-            </section>
-            <form method="post">
-                <article class="input-transferencia">
-                    <section>
-                        <label for="cbu">Ingrese CBU</label>
-                        <input type="number" name="cbu" id="cbu">
-                    </section>
-                    <section>
-                        <label for="monto-transferencia">Ingrese el monto: $</label>
-                        <input type="number" name="monto-transferencia" id="monto-transferencia">
-                    </section>
-                </article>
-
-                <article class="input-pago">
-                    <section>
-                        <label for="codigo-pago">Ingrese el codigo de pago</label>
-                        <input type="number" name="codigo-pago" id="codigo-pago">
-                    </section>
-                </article>
-                          
-                <article class="buttons">
-                    <input type="submit" value="Enviar" id="enviarFormu">
-                    <input type="reset" value="Limpiar">
-                </article>
-            </form>
-            <section>
-                <p id="mensaje"></p>
-            </section>
+            <div id="cont_log_transferencias"></div>
         </main>
 
     </section>
@@ -102,6 +62,6 @@
     </footer>
 
 
-    <script src="../Js/check.js"></script>
+    <script src="../Js/transferencias.js"></script>
 </body>
 </html>
