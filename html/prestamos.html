@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITPowerBank - Conversor</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../img/Designer (2).jpeg" alt="Logo de la Empresa">
+        </div>
+
+        <div class="login">
+            <h3>Iniciar Sesión </h3>
+            <form>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+                <button type="submit" id="sesionBTN">Iniciar Sesión</button>
+            </form>
+        </div>
+    </header>
+    
+    <section class="contenedor">
+        <aside class="cont-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./cuentas.html">
+                            Cuentas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./transferencias.html">
+                            Transferencias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./prestamos.html">
+                            Préstamos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="area-principal">
+            <nav>
+                <h1>CALCULADORA DE PRÉSTAMOS</h1>
+                <h3>Para conocer el valor de los pagos mensuales que debe realizar, ingrese los siguientes datos:</h3>
+                <p>Se considerará una tasa mensual del 2%.</p>
+                <br>                       
+                <form id="form_prest">
+                    <nav>
+                        <label for="monto">Ingrese el monto en pesos del préstamo que desea realizar:</label>
+                        <br>
+                        <input type="number" id="monto" name="monto" placeholder="Monto del préstamo" required>
+                        <br>
+                    </nav>
+                    <br>
+                    <nav>
+                        <label for="periodo">Ingrese el periodo de tiempo en meses en el cual abonará el préstamo:</label>
+                        <br>
+                        <input type="number" id="periodo" name="periodo" placeholder="Periodo" required>
+                        <br>
+                    </nav>
+                    <br>
+                    <nav>
+                        <button type="submit">Calcular</button>
+                        <br>
+                    </nav>
+                    <br>
+                    <nav>
+                        <label for="resultado">Valor calculado de los pagos mensuales a realizar:</label>
+                        <br>
+                        <input type="number" id="resultado" name="resultado" disabled>
+                        <br><br>
+                        <label for="acumulado">Valor total acumulado en el periodo indicado:</label>
+                        <br>
+                        <input type="number" id="acumulado" name="acumulado" disabled>
+                    </nav>
+                </form>
+            </nav>
+        </main>
+
+    </section>
+
+
+    <footer></footer>
+
+
+    <script src="../Js/prestamos.js" defer></script>
+</body>
+</html>
