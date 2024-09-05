@@ -16,7 +16,7 @@
         <div id="cont_log_index"></div>
         <div id="cont__boton_logout"></div>
     </header>
-    
+
     <section class="contenedor">
         <aside class="cont-nav">
             <nav>
@@ -31,7 +31,7 @@
                     </li>
                     <li>
                         <a href="./html/transferencias.html">
-                            Transferencias
+                            Pagos
                         </a>
                     </li>
                     <li>
@@ -44,25 +44,21 @@
         </aside>
 
         <main class="area-principal">
-            <nav>
-                <h1 id="bienvenida">Bienvenido</h1>
-                <p>A continuación le ofrecemos nuestro servicio gratuito de convertidor de moneda: </p>
+            <h2 id="bienvenida">¡Bienvenido!</h2>
+            <p class="p-cuentas">A continuación le ofrecemos nuestro servicio gratuito de convertidor de moneda: </p>
+            <br>
+            <h3>Ingrese el monto en pesos que desea convertir a dólares (valor oficial).</h3>
+            <p class="info-form">Venta: $973</p>
+            <div class="form-container">
+            <form id="form_conv">
+                <label for="monto">Monto en pesos:</label> <br>
+                <input type="number" id="monto" name="monto" placeholder="Monto en pesos" required>
+                <button type="submit">Convertir</button> 
                 <br>
-                <nav>
-                    <h3>Ingrese el monto en pesos que desea convertir a dólares (valor oficial).</h3>
-                    <p>Venta: $973</p>
-                    <br>
-                    <form id="form_conv">
-                        <label for="monto">Monto en pesos:</label> <br>
-                        <input type="number" id="monto" name="monto" placeholder="Monto en pesos" required>
-                        <button type="submit">Convertir</button>
-                        <br><br>
-                        <label for="resultado">Monto calculado en dólares:</label>
-                        <br>
-                        <input type="number" id="resultado" name="resultado" placeholder="Monto en USD" disabled>
-                    </form>
-                </nav>
-            </nav>      
+                <label for="resultado">Monto calculado en dólares:</label>
+                <input type="number" id="resultado" name="resultado" placeholder="Monto en USD" disabled>
+            </form>
+        </div>
         </main>
 
     </section>

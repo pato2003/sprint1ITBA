@@ -48,7 +48,7 @@ function acceder(event) {
         let h1Bienvenida = document.getElementById("bienvenida");
         loginDiv.style.display = 'none';
 
-        h1Bienvenida.textContent = `Bienvenido ${user}`;
+        h1Bienvenida.textContent = `¡Bienvenido, ${user}!`;
 
         localStorage.setItem("validado", "true");
         renderizado_cond();

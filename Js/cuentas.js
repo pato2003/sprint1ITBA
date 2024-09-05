@@ -40,21 +40,6 @@ const cont_log_cuentas = `
                     <li>Pago de Servicios: -$1,200 (03/09/2024)</li>
                 </ul>
             </div> 
-
-            <!-- Gráfico ilustrativo -->
-             <div class="account-charts">
-                <h3>Resumen en Gráficos</h3>
-                <img src="grafico-ejemplo.png" alt="Gráfico de ejemplo de saldos">
-            </div>
-
-            <div id="accountModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Detalles de la Cuenta</h3>
-                    <p id="modalAccountNumber"></p>
-                    <p>Información adicional sobre la cuenta seleccionada.</p>
-                </div>
-            </div>
         `;
 
 // Renderizado condicional
@@ -64,7 +49,7 @@ if ( validado === "true" ) {
     content2.innerHTML = cont_log_cuentas;
 } else {
     content1.innerHTML = '<p>Sesión no iniciada.</p>';
-    content2.innerHTML = '<h3>Le recordamos que si desea acceder a todas las funcionalidades debe iniciar sesión en la sección "Inicio".</h3>';
+    content2.innerHTML = '<h4 class="recordatorio">Le recordamos que si desea acceder a todas las funcionalidades debe iniciar sesión en la sección "Inicio".</h4>';
 }
 }
 

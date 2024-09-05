@@ -4,12 +4,12 @@
     --difuminado: #17263028;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: var(--claro);
     display: flex;
     flex-direction: column;
@@ -51,15 +51,14 @@ body{
     cursor: pointer;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
     flex: 1;
 }
 
-.cont-nav{
+.cont-nav {
     width: 200px;
     padding: 15px;
-    /* border: black 1px solid; */
     border-right: 3px solid var(--difuminado);
 }
 
@@ -90,11 +89,21 @@ body{
     flex: 1;
 }
 
+.p-cuentas {
+    text-align: center;
+    margin-top: -1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
 footer {
     color: var(--oscuro);
     text-align: center;
-    padding: 10px;
-    position: absolute;
+    padding: 10px 0px;
     bottom: 0;
     width: 100%;
     border-top: var(--difuminado) 3px solid;
@@ -114,45 +123,9 @@ footer nav ul li a {
     text-decoration: none;
 }
 
-
-/* INICIO */
-
-.loan-calculator, .currency-converter {
-    margin-top: 20px;
-}
-
-.loan-calculator form, .currency-converter form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.loan-calculator label, .currency-converter label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.loan-calculator input, .currency-converter input, .currency-converter select {
-    margin-bottom: 10px;
-    padding: 8px;
-    width: 200px;
-}
-
-.loan-calculator button, .currency-converter button {
-    padding: 8px 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.loan-calculator button:hover, .currency-converter button:hover {
-    background-color: #0056b3;
-}
-
-.loan-calculator #loanResult, .currency-converter #currencyResult {
-    margin-top: 10px;
-    font-size: 14px;
+.recordatorio {
+text-align: center;
+margin-top: 3rem;
 }
 
 /* CUENTAS */
@@ -163,15 +136,16 @@ footer nav ul li a {
     margin-top: 20px;
 }
 
-.accounts-table th, .accounts-table td {
-    border: 1px solid #ddd;
+.accounts-table th,
+.accounts-table td {
+    border: 1px solid var(--difuminado);
     padding: 10px;
     text-align: center;
 }
 
 .accounts-table th {
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--oscuro);
+    color: var(--claro);
 }
 
 .accounts-table tr:nth-child(even) {
@@ -184,15 +158,12 @@ footer nav ul li a {
 
 .accounts-table button {
     padding: 5px 10px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--oscuro);
+    color: var(--claro);
     border: none;
     cursor: pointer;
 }
 
-.accounts-table button:hover {
-    background-color: #0056b3;
-}
 
 /* Estilos para el resumen de cuentas */
 .account-summary {
@@ -209,98 +180,24 @@ footer nav ul li a {
 }
 
 .account-summary ul li {
-    background: #f4f4f4;
+    background: var(--difuminado);
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--oscuro);
 }
-
-/* Estilos para gráficos */
-.account-charts {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.account-charts img {
-    width: 80%;
-    max-width: 600px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
 
 /* TRANSFERENCIAS */
 
-.input-pago, .input-prestamo{
+.input-pago,
+.input-prestamo {
     display: none;
 }
 
-h1{
-    text-align: center;
-    margin: 1rem auto;
-    font-size: 2rem;
+.select-op{
+    margin-bottom: 10px;
 }
 
-main>section, main>form{
-    width: 50vw;
-    margin: 0 auto;
-
-}
-
-form section, main>section{
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-form input, section select{
-    width: 20vw;
-}
-
-
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-form input[type="submit"], form input[type="reset"]{
+form input[type="submit"],
+form input[type="reset"] {
     width: 49%;
     border: none;
     background-color: var(--oscuro);
@@ -310,14 +207,48 @@ form input[type="submit"], form input[type="reset"]{
     cursor: pointer;
 }
 
+/* PRESTAMOS */
 
+.form-container {
+    border: 2px solid var(--difuminado);
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+}
 
+.label-prestamo {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-form {
+    margin: 10px 0 0 15px;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    color: var(--claro);
+    background-color: var(--oscuro);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
 
 /* MEDIAS QUERYS */
 
-        /* Tablets */
+/* Tablets */
 @media (max-width: 768px) {
-    .encabezado{
+    .encabezado {
         flex-direction: column;
         align-items: center;
     }
@@ -348,11 +279,15 @@ form input[type="submit"], form input[type="reset"]{
         padding: 10px;
     }
 
-    
+
+
 }
-        /* CELULARES */
+
+/* CELULARES */
 @media (max-width: 523px) {
-    .login input, .login button {
+
+    .login input,
+    .login button {
         width: 100%;
         margin: 5px 0;
     }

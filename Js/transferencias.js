@@ -5,41 +5,39 @@ const content1 = document.getElementById('cont__boton_logout');
 const content2 = document.getElementById('cont_log_transferencias');
 
 const cont_log_transferencias = `
-            <section>
-                <label for="accion">Seleccione el tipo de operación: </label>
-                <select name="accion" id="accion">
-                    <option value="transferencia">Transferencia</option>
-                    <option value="pago">Pago</option>
-                </select>
-            </section>
-            <form method="post">
-                <article class="input-transferencia">
-                    <section>
-                        <label for="cbu">Ingrese CBU</label>
-                        <input type="number" name="cbu" id="cbu">
-                    </section>
-                    <section>
-                        <label for="monto-transferencia">Ingrese el monto: $</label>
-                        <input type="number" name="monto-transferencia" id="monto-transferencia">
-                    </section>
-                </article>
+<p class="info-form">Para realizar una transferencia o pagar con codigo, complete los siguientes datos:</p>
+    <div class="form-container">
+        <section class="select-op">
+            <label for="accion">Seleccione el tipo de operación: </label>
+            <select name="accion" id="accion">
+                <option value="transferencia">Transferencia</option>
+                <option value="pago">Pago</option>
+            </select>
+        </section>
+        <form method="post" >
+            <div class="input-transferencia">
+                <label for="cbu">Ingrese CBU:</label>
+                <input type="number" name="cbu" id="cbu" placeholder="CBU a transferir">
+                <label for="monto-transferencia">Ingrese el monto:</label>
+                <input type="number" name="monto-transferencia" id="monto-transferencia" placeholder="Monto a transferir">
+            </div>
+    
+            <div class="input-pago">
+                <section>
+                <label for="codigo-pago">Ingrese el codigo de pago:</label>
+                <input type="number" name="codigo-pago" id="codigo-pago" placeholder="Codigo de pago">
+                </section>
 
-                <article class="input-pago">
-                    <section>
-                        <label for="codigo-pago">Ingrese el codigo de pago</label>
-                        <input type="number" name="codigo-pago" id="codigo-pago">
-                    </section>
-                </article>
-                          
+            </div>
                 <article class="buttons">
                     <input type="submit" value="Enviar" id="enviarFormu">
                     <input type="reset" value="Limpiar">
                 </article>
+
+
             </form>
-            <section>
-                <p id="mensaje"></p>
-            </section>
-        `;
+    </div>
+`;
 
 // Renderizado condicional
 function renderizado_cond() {
@@ -48,7 +46,7 @@ if ( validado === "true" ) {
     content2.innerHTML = cont_log_transferencias;
 } else {
     content1.innerHTML = '<p>Sesión no iniciada.</p>';
-    content2.innerHTML = '<h3>Le recordamos que si desea acceder a todas las funcionalidades debe iniciar sesión en la sección "Inicio".</h3>';
+    content2.innerHTML = '<h4 class="recordatorio">Le recordamos que si desea acceder a todas las funcionalidades debe iniciar sesión en la sección "Inicio".</h4>';
 }
 }
 
